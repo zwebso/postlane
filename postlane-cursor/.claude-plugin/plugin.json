@@ -14,6 +14,8 @@
   "icon": "./assets/postlane-logo-cursor.png",
   "documentationUrl": "https://www.postlane.email/docs",
   "supportUrl": "https://github.com/zwebso/postlane-plugin/issues",
+  "privacyPolicyUrl": "https://www.postlane.email/privacy",
+  "termsOfServiceUrl": "https://www.postlane.email/terms",
   "userConfig": {
     "postlane_api_key": {
       "type": "string",

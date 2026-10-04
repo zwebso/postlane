@@ -49,6 +49,10 @@ Install Postlane from the Plugins directory. That listing includes the skill onl
 }
 ```
 
+## Privacy
+
+The plugin stores nothing on your machine. When a Postlane tool runs, it sends your API key and the email you asked for (sender, recipients, subject, and body) to the Postlane API at `https://www.postlane.email`, and nowhere else. Postlane keeps send records while the workspace exists. See the [Privacy Policy](https://www.postlane.email/privacy) and [Terms of Service](https://www.postlane.email/terms).
+
 ## Development
 
 `npm test` runs the MCP server tests. Each agent reads its own manifest from this folder:

@@ -20,6 +20,9 @@
     "category": "Developer Tools",
     "capabilities": ["Add transactional email to an app", "Use saved email templates", "Set up a sending domain"],
     "websiteURL": "https://www.postlane.email",
+    "supportURL": "https://www.postlane.email/contact",
+    "privacyPolicyURL": "https://www.postlane.email/privacy",
+    "termsOfServiceURL": "https://www.postlane.email/terms",
     "defaultPrompt": [
       "Send a welcome email when a user signs up, using Postlane.",
       "Add a password reset email with the Reset your password template.",
