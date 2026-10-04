@@ -11,6 +11,9 @@
   "repository": "https://github.com/zwebso/postlane",
   "license": "MIT",
   "keywords": ["email", "transactional", "postlane", "password-reset", "notifications", "mcp"],
+  "icon": "./assets/postlane-logo-cursor.png",
+  "documentationUrl": "https://www.postlane.email/docs",
+  "supportUrl": "https://github.com/zwebso/postlane-plugin/issues",
   "userConfig": {
     "postlane_api_key": {
       "type": "string",
