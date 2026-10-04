@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Postlane">
+  <rect width="512" height="512" rx="96" fill="#F6F3EE"/>
+  <g fill="#D65A33" transform="translate(156 318) skewX(-16)">
+    <rect x="0" y="-132" width="44" height="196" rx="10"/>
+    <rect x="68" y="-96" width="44" height="160" rx="10"/>
+    <rect x="136" y="-56" width="44" height="120" rx="10"/>
+  </g>
+</svg>
