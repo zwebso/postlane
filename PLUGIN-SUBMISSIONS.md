@@ -6,7 +6,7 @@ The plugin lives in `postlane-cursor/`. Push it before any submission, because e
 | --- | --- | --- |
 | Cursor Marketplace | Submitted Oct 4, 2026 | — |
 | Claude directory (claude.ai/directory/manage) | Submitted Oct 5, 2026 from `zwebso/postlane-plugin`, push webhook on | Reviewer clears the credential hold, then select Publish |
-| OpenAI (ChatGPT and Codex), skills only | Ready | Verified developer identity on platform.openai.com |
+| OpenAI (ChatGPT and Codex), skills only | Submitted Oct 5, 2026 | Review feedback arrives by email; then select Publish plugin |
 | npm | Published `postlane-mcp@0.1.0` Oct 5, 2026 | — |
 | MCP Registry | Published `io.github.zwebso/postlane` Oct 5, 2026 | — |
 | Cline MCP Marketplace | Ready | Test an install in Cline from `llms-install.md` |
