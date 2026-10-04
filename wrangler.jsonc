@@ -1,0 +1,101 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "postlane",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": {
+    "ENVIRONMENT": "development",
+    "MAIL_PROVIDER": "mock",
+    "APP_ORIGIN": "http://localhost:5173",
+    "SYSTEM_MAIL_FROM": "noreply@postlane.email",
+    "CLOUDFLARE_ACCOUNT_ID": "3450dcc5bfb29cbb7f9dcf32866a848e",
+    "OPERATOR_EMAILS": "zwebso@gmail.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "postlane",
+      "database_id": "b32effd5-2272-420b-853f-f7cf583165bb",
+      "migrations_dir": "schema"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MAIL",
+      "bucket_name": "postlane-mail"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ],
+  "queues": {
+    "consumers": [
+      {
+        "queue": "postlane-email-events",
+        "max_batch_size": 10,
+        "max_batch_timeout": 5
+      }
+    ]
+  },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "postlane.email", "custom_domain": true },
+    { "pattern": "www.postlane.email", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "env": {
+    "production": {
+      "name": "postlane",
+      "vars": {
+        "ENVIRONMENT": "production",
+        "MAIL_PROVIDER": "cloudflare",
+        "APP_ORIGIN": "https://www.postlane.email",
+        "SYSTEM_MAIL_FROM": "noreply@postlane.email",
+        "CLOUDFLARE_ACCOUNT_ID": "3450dcc5bfb29cbb7f9dcf32866a848e",
+        "DOMAIN_CONNECT_LIVE": "1",
+        "OPERATOR_EMAILS": "zwebso@gmail.com"
+      },
+      "routes": [
+        { "pattern": "postlane.email", "custom_domain": true },
+        { "pattern": "www.postlane.email", "custom_domain": true }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "postlane",
+          "database_id": "b32effd5-2272-420b-853f-f7cf583165bb"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "MAIL",
+          "bucket_name": "postlane-mail"
+        }
+      ],
+      "send_email": [
+        {
+          "name": "EMAIL"
+        }
+      ],
+      "queues": {
+        "consumers": [
+          {
+            "queue": "postlane-email-events",
+            "max_batch_size": 10,
+            "max_batch_timeout": 5
+          }
+        ]
+      }
+    }
+  }
+}

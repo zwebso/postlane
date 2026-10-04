@@ -1,0 +1,52 @@
+# Postlane
+
+Postlane is a transactional email API. Base URL: https://www.postlane.email
+Docs: https://www.postlane.email/docs
+Dashboard: https://www.postlane.email/app
+
+It sends welcome mail, password resets, receipts, and notifications. It is not an inbox, and it does not provide IMAP.
+
+## Send
+
+POST /v1/emails
+Authorization: Bearer pl_live_…
+Content-Type: application/json
+Idempotency-Key: <stable key for this logical send>
+
+Required body: from, to, and a subject with html or text. A template name can supply the subject and body.
+Optional: cc, bcc, reply_to (or replyTo), template, variables.
+
+to, cc, and bcc accept a string or an array. At most 50 recipients. Subject plus body at most 5 MiB. No attachments.
+
+202 response: { "id": "em_…", "status": "queued" | "accepted" | "rejected" | "failed" }
+Repeating the same Idempotency-Key returns the original result and does not send again.
+queued means Cloudflare accepted the message. accepted on a local mock means it was stored and not delivered. Neither status means inbox placement.
+
+Starter templates, by name: "Welcome aboard", "Reset your password", "Your receipt".
+variables is an object of short strings. Tokens in a template look like {{first_name}}.
+
+## Read
+
+GET /v1/emails
+GET /v1/emails/:id
+
+The list requires a key scoped to Read activity or Full access. A send-only key returns insufficient_scope.
+List response: { "data": [ { "id", "status", "from_address", "to_address", "subject", "created_at" } ] }
+
+## Errors
+
+{ "error": { "code", "message", "request_id", "retryable" } }
+Retry only when retryable is true.
+sender_not_verified: the from domain is not verified for this key’s workspace.
+invalid_api_key: missing, wrong, or revoked bearer key.
+
+## Setup
+
+1. Sign in at https://www.postlane.email/app
+2. Add a sending domain at /app/domains and publish the DNS records shown there.
+   Ownership is TXT _postlane.<domain> = postlane-send=<token>
+   Also publish the bounce MX, SPF, and DKIM values from the dashboard. Do not invent DKIM.
+3. Create a key at /app/api-keys. The secret is shown once and starts with pl_live_.
+4. Send from your server. Keep the key off the client.
+
+There is no official SDK, no attachment API, and no signed webhook event stream.

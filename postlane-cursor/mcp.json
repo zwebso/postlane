@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "postlane": {
+      "command": "node",
+      "args": ["${CURSOR_PLUGIN_ROOT}/mcp/server.mjs"],
+      "cwd": "${CURSOR_PLUGIN_ROOT}",
+      "env": {
+        "POSTLANE_API_KEY": "${POSTLANE_API_KEY}"
+      }
+    }
+  }
+}

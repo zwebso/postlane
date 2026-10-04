@@ -1,0 +1,18 @@
+{
+  "name": "postlane",
+  "owner": {
+    "name": "Postlane",
+    "email": "hello@postlane.email"
+  },
+  "metadata": {
+    "description": "Postlane transactional email for Cursor."
+  },
+  "plugins": [
+    {
+      "name": "postlane",
+      "source": "postlane-cursor",
+      "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications.",
+      "keywords": ["email", "transactional", "postlane", "resend", "password-reset", "notifications"]
+    }
+  ]
+}

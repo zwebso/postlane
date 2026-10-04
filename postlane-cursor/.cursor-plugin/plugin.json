@@ -1,0 +1,23 @@
+{
+  "name": "postlane",
+  "version": "0.1.0",
+  "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications.",
+  "author": {
+    "name": "Postlane",
+    "email": "hello@postlane.email"
+  },
+  "homepage": "https://www.postlane.email/docs",
+  "keywords": ["email", "transactional", "postlane", "resend", "password-reset", "notifications", "mcp"],
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "POSTLANE_API_KEY": {
+        "type": "string",
+        "title": "Postlane API key",
+        "description": "Bearer key from https://www.postlane.email/app/api-keys. It starts with pl_live_."
+      }
+    },
+    "required": ["POSTLANE_API_KEY"]
+  }
+}
