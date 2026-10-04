@@ -343,4 +343,30 @@ a.pl-btn,.pl-cfbar .pl-btn{cursor:pointer;pointer-events:auto;position:relative;
 .pl-template-preview h2{font-size:16px;margin-bottom:12px}
 .pl-template-preview iframe{width:100%;height:420px;border:1px solid var(--border);border-radius:8px;background:#fff}
 @media(max-width:900px){.pl-template-layout,.pl-template-editor{grid-template-columns:1fr}}
+.pl-legal{max-width:760px;margin:0 auto;padding:18px 0 48px}
+.pl-legal h1{font-size:clamp(36px,5vw,52px);letter-spacing:-1.8px;font-weight:650;line-height:1.1}
+.pl-legal-lead{margin-top:16px;font-size:17px;color:#3e4338;max-width:62ch}
+.pl-legal-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin:28px 0 8px;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pl-legal-meta div{min-width:0}
+.pl-legal-meta dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8c6b4c;font-weight:700}
+.pl-legal-meta dd{margin:4px 0 0;font-size:14px;color:var(--ink);line-height:1.5}
+.pl-legal-switch{display:flex;flex-wrap:wrap;gap:18px;margin:18px 0 8px;font-size:14px;font-weight:600}
+.pl-legal-switch a{color:#9a3e1e}
+.pl-legal-toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+.pl-legal-toc a{font-size:12px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#3e4338}
+.pl-legal-toc a:hover{border-color:#9a3e1e;color:#9a3e1e}
+.pl-legal-body section{padding:28px 0;border-top:1px solid var(--border)}
+.pl-legal-body h2{font-size:22px;letter-spacing:-.4px;margin-bottom:12px}
+.pl-legal-body h3{font-size:16px;margin:18px 0 8px}
+.pl-legal-body p,.pl-legal-body li{font-size:15px;color:#3e4338;line-height:1.7}
+.pl-legal-body p+p{margin-top:12px}
+.pl-legal-body ul{margin:10px 0 0;padding-left:18px}
+.pl-legal-body li+li{margin-top:6px}
+.pl-legal-body a{color:#9a3e1e;font-weight:600}
+.pl-legal-body code{font-size:13px;background:#f3f3ec;padding:1px 5px;border-radius:4px}
+.pl-legal-tablewrap{overflow-x:auto;margin:14px 0}
+.pl-legal-body table{width:100%;border-collapse:collapse;font-size:13px;background:#fff}
+.pl-legal-body th,.pl-legal-body td{text-align:left;vertical-align:top;border-bottom:1px solid var(--border);padding:10px 12px;color:#3e4338}
+.pl-legal-body th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#6b745d}
+@media(max-width:760px){.pl-legal{padding-top:8px}.pl-legal-meta{grid-template-columns:1fr}.pl-legal h1{font-size:34px}}
 

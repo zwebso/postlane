@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prerender-legal.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc -b --pretty false",
     "db:migrate": "wrangler d1 execute postlane --local --file=schema/001_init.sql",
     "db:migrate:remote": "wrangler d1 execute postlane --remote --file=schema/001_init.sql",
-    "deploy": "vite build && wrangler deploy --var ENVIRONMENT:production --var MAIL_PROVIDER:cloudflare --var APP_ORIGIN:https://www.postlane.email --var SYSTEM_MAIL_FROM:noreply@postlane.email --var CLOUDFLARE_ACCOUNT_ID:3450dcc5bfb29cbb7f9dcf32866a848e --var DOMAIN_CONNECT_LIVE:1 --var OPERATOR_EMAILS:zwebso@gmail.com"
+    "deploy": "vite build && node scripts/prerender-legal.mjs && wrangler deploy --var ENVIRONMENT:production --var MAIL_PROVIDER:cloudflare --var APP_ORIGIN:https://www.postlane.email --var SYSTEM_MAIL_FROM:noreply@postlane.email --var CLOUDFLARE_ACCOUNT_ID:3450dcc5bfb29cbb7f9dcf32866a848e --var DOMAIN_CONNECT_LIVE:1 --var OPERATOR_EMAILS:zwebso@gmail.com"
   },
   "dependencies": {
     "hono": "^4.9.8",
