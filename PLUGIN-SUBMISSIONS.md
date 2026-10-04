@@ -7,9 +7,10 @@ The plugin lives in `postlane-cursor/`. Push it before any submission, because e
 | Cursor Marketplace | Submitted Oct 4, 2026 | — |
 | Claude Code community marketplace | Ready | Push |
 | OpenAI (ChatGPT and Codex), skills only | Ready | Verified developer identity on platform.openai.com |
-| MCP Registry | Ready | `npm publish` |
-| Cline MCP Marketplace | Ready | `npm publish` |
-| Gemini CLI gallery | Needs a repo with the plugin at its root | `zwebso/postlane-plugin` |
+| npm | Published `postlane-mcp@0.1.0` Oct 5, 2026 | — |
+| MCP Registry | Published `io.github.zwebso/postlane` Oct 5, 2026 | — |
+| Cline MCP Marketplace | Ready | Test an install in Cline from `llms-install.md` |
+| Gemini CLI gallery | Pushed to `zwebso/postlane-plugin` with the `gemini-cli-extension` topic Oct 4, 2026 | Wait for the daily crawl |
 
 ## Short description (reuse everywhere)
 
@@ -54,8 +55,8 @@ mcp-publisher publish
 
 Open an issue with the template at https://github.com/cline/mcp-marketplace/issues/new?template=mcp-server-submission.yml after `postlane-mcp` is on npm.
 
-- GitHub Repo URL: https://github.com/zwebso/postlane/tree/main/postlane-cursor
-- Logo: `postlane-cursor/assets/postlane-logo-400.png` (400×400)
+- GitHub Repo URL: https://github.com/zwebso/postlane-plugin
+- Logo: https://raw.githubusercontent.com/zwebso/postlane-plugin/main/assets/postlane-logo-400.png (400×400)
 - Reason for addition:
 
   > Postlane is a transactional email API. This server lets Cline send a real test email (`send_email`) and check what happened to it (`get_email`, `list_emails`) while it builds welcome, verification, password-reset, and receipt email into an app. Sends require an `Idempotency-Key`, so a retried tool call never sends twice, and the key is read only from the `POSTLANE_API_KEY` environment variable and never logged. `llms-install.md` walks Cline through setup with `npx -y postlane-mcp`.
