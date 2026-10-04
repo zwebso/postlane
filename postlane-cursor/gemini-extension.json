@@ -1,0 +1,23 @@
+{
+  "name": "postlane",
+  "version": "0.1.0",
+  "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications.",
+  "mcpServers": {
+    "postlane": {
+      "command": "node",
+      "args": ["${extensionPath}${/}mcp${/}server.mjs"],
+      "cwd": "${extensionPath}",
+      "env": {
+        "POSTLANE_API_KEY": "$POSTLANE_API_KEY"
+      }
+    }
+  },
+  "settings": [
+    {
+      "name": "Postlane API key",
+      "description": "Bearer key from https://www.postlane.email/app/api-keys. It starts with pl_live_.",
+      "envVar": "POSTLANE_API_KEY",
+      "sensitive": true
+    }
+  ]
+}

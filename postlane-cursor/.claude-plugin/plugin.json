@@ -1,0 +1,31 @@
+{
+  "name": "postlane",
+  "version": "0.1.0",
+  "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications.",
+  "author": {
+    "name": "Postlane",
+    "email": "hello@postlane.email",
+    "url": "https://www.postlane.email"
+  },
+  "homepage": "https://www.postlane.email/docs",
+  "repository": "https://github.com/zwebso/postlane",
+  "license": "MIT",
+  "keywords": ["email", "transactional", "postlane", "password-reset", "notifications", "mcp"],
+  "userConfig": {
+    "postlane_api_key": {
+      "type": "string",
+      "title": "Postlane API key",
+      "description": "Bearer key from https://www.postlane.email/app/api-keys. It starts with pl_live_.",
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "postlane": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"],
+      "env": {
+        "POSTLANE_API_KEY": "${user_config.postlane_api_key}"
+      }
+    }
+  }
+}

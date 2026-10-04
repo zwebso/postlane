@@ -1,0 +1,39 @@
+{
+  "name": "postlane",
+  "version": "0.1.0",
+  "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications.",
+  "author": {
+    "name": "Postlane",
+    "email": "hello@postlane.email",
+    "url": "https://www.postlane.email"
+  },
+  "homepage": "https://www.postlane.email/docs",
+  "repository": "https://github.com/zwebso/postlane",
+  "license": "MIT",
+  "keywords": ["email", "transactional", "postlane", "password-reset", "notifications"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Postlane",
+    "shortDescription": "Send transactional email",
+    "longDescription": "Adds Postlane transactional email to your app: welcome mail, email verification, password resets, receipts, and notifications. The skill teaches the agent the Postlane HTTP API (POST /v1/emails with an Idempotency-Key), saved templates, error handling, and the DNS records needed to verify a sending domain. It is for developers who want their app to send email from their own domain. It does not create a mailbox, send attachments, or provide a signed webhook stream, and sending requires a Postlane account with a verified domain and a pl_live_ API key.",
+    "developerName": "Postlane",
+    "category": "Developer Tools",
+    "capabilities": ["Add transactional email to an app", "Use saved email templates", "Set up a sending domain"],
+    "websiteURL": "https://www.postlane.email",
+    "defaultPrompt": [
+      "Send a welcome email when a user signs up, using Postlane.",
+      "Add a password reset email with the Reset your password template.",
+      "What DNS records do I need to verify my sending domain?"
+    ],
+    "brandColor": "#3C50E8",
+    "composerIcon": "./assets/postlane-logo-cursor.png",
+    "logo": "./assets/postlane-logo-cursor.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "publication": {
+        "release_notes": "Initial release: a skill for sending transactional email with the Postlane API."
+      }
+    }
+  }
+}

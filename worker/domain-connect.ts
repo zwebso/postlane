@@ -18,7 +18,7 @@ export function sendingTemplate() {
     syncBlock: false,
     syncPubKeyDomain: "postlane.email",
     syncRedirectDomain: "www.postlane.email",
-    logoUrl: "https://raw.githubusercontent.com/zwebso/Templates/brand-assets/logo.svg",
+    logoUrl: "https://www.postlane.email/favicon.png",
     description: "Authorize DNS records so Postlane can send transactional email from this domain.",
     variableDescription: "%token%: ownership token Postlane issued for this domain",
     records: [

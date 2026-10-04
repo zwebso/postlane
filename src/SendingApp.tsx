@@ -43,7 +43,7 @@ function swapCh(word: string) {
   return Math.max(...word.split(/\s+/).map((part) => part.length));
 }
 const code = `const response = await fetch(\n  '/v1/emails', {\n    method: 'POST',\n    headers: {\n      Authorization: 'Bearer pl_live_YOUR_API_KEY',\n      'Content-Type': 'application/json',\n      'Idempotency-Key': 'welcome-user-123'\n    },\n    body: JSON.stringify({\n      from: 'hello@send.yourdomain.com',\n      to: ['alex@example.com'],\n      subject: 'Welcome to the good part',\n      html: '<h1>You’re in.</h1>'\n    })\n  }\n);`;
-function Mark() { return <span className="pl-mark" aria-hidden="true"><i/><i/><i/></span>; }
+function Mark() { return <img className="pl-mark" src="/favicon.png" alt="" />; }
 function Brand() { return <Link to="/" className="pl-brand"><Mark/>postlane</Link>; }
 function Button({children,onClick,secondary=false,type='button',disabled=false}: {children:ReactNode;onClick?:()=>void;secondary?:boolean;type?:'button'|'submit';disabled?:boolean}) { return <button disabled={disabled} type={type} className={`pl-btn ${secondary?'pl-secondary':''}`} onClick={onClick}>{children}</button>; }
 function openCloudflarePopup(domain: string) {

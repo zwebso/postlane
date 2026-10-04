@@ -125,13 +125,11 @@ a {
   padding: 0 12px 28px;
 }
 .brandmark {
-  background: var(--blue);
-  color: #fff;
   width: 31px;
   height: 31px;
-  display: grid;
-  place-items: center;
+  display: block;
   border-radius: 8px;
+  object-fit: cover;
 }
 .workspace-switch {
   width: 100%;

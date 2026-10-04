@@ -1,0 +1,28 @@
+{
+  "name": "postlane-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the Postlane transactional email API: send_email, get_email, and list_emails.",
+  "mcpName": "io.github.zwebso/postlane",
+  "type": "module",
+  "bin": {
+    "postlane-mcp": "mcp/server.mjs"
+  },
+  "files": [
+    "mcp/server.mjs"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test mcp/server.test.mjs"
+  },
+  "keywords": ["mcp", "email", "transactional", "postlane"],
+  "homepage": "https://www.postlane.email/docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zwebso/postlane.git",
+    "directory": "postlane-cursor"
+  },
+  "author": "Postlane <hello@postlane.email>",
+  "license": "MIT"
+}

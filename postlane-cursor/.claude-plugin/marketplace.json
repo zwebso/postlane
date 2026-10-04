@@ -1,0 +1,17 @@
+{
+  "name": "postlane",
+  "owner": {
+    "name": "Postlane",
+    "email": "hello@postlane.email"
+  },
+  "metadata": {
+    "description": "Postlane transactional email for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "postlane",
+      "source": "./",
+      "description": "Send transactional email with the Postlane API. Use for welcome mail, password resets, receipts, and notifications."
+    }
+  ]
+}

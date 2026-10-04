@@ -3,6 +3,7 @@
  * Postlane MCP server. Speaks newline-delimited JSON-RPC on stdin/stdout.
  * POSTLANE_API_KEY is a pl_live_ bearer key. It is never written to logs.
  */
+import { realpathSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
 const DEFAULT_BASE = "https://www.postlane.email";
@@ -191,4 +192,5 @@ function start() {
   });
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) start();
+// npx and npm bins run this file through a symlink, so compare resolved paths.
+if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href) start();

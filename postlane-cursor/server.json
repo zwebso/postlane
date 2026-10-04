@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zwebso/postlane",
+  "description": "Send transactional email and read send activity through the Postlane API.",
+  "repository": {
+    "url": "https://github.com/zwebso/postlane",
+    "source": "github",
+    "subfolder": "postlane-cursor"
+  },
+  "websiteUrl": "https://www.postlane.email/docs",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "postlane-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "POSTLANE_API_KEY",
+          "description": "Bearer key from https://www.postlane.email/app/api-keys. It starts with pl_live_.",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

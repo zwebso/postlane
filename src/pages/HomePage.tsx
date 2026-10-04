@@ -12,7 +12,7 @@ const faqs = [
 ["What is the difference between a mailbox and an alias?", "A mailbox has its own sign-in and storage. An alias, like hello@yourcompany.com, delivers messages into an existing mailbox and does not need a separate inbox."],
 ["Is there a free plan?", "Yes. Sandbox is free: 3 sending domains, 100 emails each UTC day, and 1,000 each month. Launch and Scale raise those limits. Billing is not connected yet."],
 ["Is Postlane available to buy today?", "This is a preview of the product. The plans shown here are proposed pricing. Live billing, supported mail features, and launch availability are still being finalized."]];
-function Brand(){return <span className="hp-brand"><span className="hp-brand-icon"><Icon name="mail" /></span>postlane<span className="hp-brand-period">.</span></span>}
+function Brand(){return <span className="hp-brand"><img className="hp-brand-icon" src="/favicon.png" alt="" />postlane<span className="hp-brand-period">.</span></span>}
 function CTA({children="Explore email setup",secondary=false}:{children?:React.ReactNode;secondary?:boolean}){return <Link className={`hp-button ${secondary?"hp-secondary":""}`} to="/get-started" onClick={()=>trackMarketing("setup_cta_clicked",{placement:String(children)})}>{children}<Icon name="arrow" /></Link>}
 export function HomePage(){
 useEffect(()=>{document.title="Postlane — Business email, simplified";trackMarketing("homepage_viewed");},[]);

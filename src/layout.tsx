@@ -36,9 +36,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
     <div>
       <div className="auth-brand">
         <div className="brand">
-          <span className="brandmark">
-            <Icon name="mail" />
-          </span>
+          <img className="brandmark" src="/favicon.png" alt="" />
           postlane
         </div>
       </div>
@@ -70,9 +68,7 @@ export function AppShell({
   const nav = (
     <>
       <Link className="brand" to={`/w/${workspace.slug}/overview`}>
-        <span className="brandmark">
-          <Icon name="mail" />
-        </span>
+        <img className="brandmark" src="/favicon.png" alt="" />
         postlane
       </Link>
       <button className="workspace-switch" type="button" onClick={() => navigate(`/w/${workspace.slug}/settings`)}>
