@@ -8,7 +8,7 @@
   },
   "homepage": "https://www.postlane.email/docs",
   "keywords": ["email", "transactional", "postlane", "resend", "password-reset", "notifications", "mcp"],
-  "logo": "assets/icon.svg",
+  "logo": "assets/postlane-logo-cursor.png",
   "variables": {
     "type": "object",
     "properties": {
